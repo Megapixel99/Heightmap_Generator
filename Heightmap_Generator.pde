@@ -4,7 +4,7 @@ float flying = 0;
 
 float[][] terrain;
 
-float SALT = .005;
+float SALT = .009;
 
 void setup() {
   size(900, 900);

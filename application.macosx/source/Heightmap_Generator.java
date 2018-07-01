@@ -20,7 +20,7 @@ float flying = 0;
 
 float[][] terrain;
 
-float SALT = .005f;
+float SALT = .009f;
 
 public void setup() {
   
@@ -29,6 +29,9 @@ public void setup() {
   terrain = new float[cols][rows];
 }
 
+public void mouseClicked(){
+  saveFrame();
+}
 
 public void draw() {
   background(0);
@@ -48,6 +51,7 @@ public void draw() {
           terrain[x][y-1] + 
           terrain[x][y+1]) / 256;
       }
+      
       int index = x + y * cols;
       pixels[index] = color(terrain[x][y]);
     }
